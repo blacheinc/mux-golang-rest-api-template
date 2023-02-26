@@ -1,8 +1,8 @@
 package typing
 
 type Health struct {
-	Version     string `json:"version"`
 	Status      bool   `json:"status"`
+	Version     string `json:"version"`
 	Description string `json:"description"`
 }
 

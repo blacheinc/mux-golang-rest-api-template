@@ -9,9 +9,9 @@ import (
 
 func HealthCheck(w http.ResponseWriter, r *http.Request) {
 	data := typing.Health{
-		Version:     "0.0.1",
 		Status:      true,
-		Description: "Raid2Earn. Leaders create raids and pawns pick 'em up.",
+		Version:     "0.0.1",
+		Description: "Golang Server Template",
 	}
 	helper.SendJSONResponse(w, true, http.StatusOK, "Health Check", typing.M{"health": data})
 }
