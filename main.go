@@ -13,7 +13,6 @@ import (
 	"github.com/joho/godotenv"
 	"github.com/opensaucerer/gotemplate/config"
 
-	"github.com/opensaucerer/gotemplate/database"
 	"github.com/opensaucerer/gotemplate/middleware/v1"
 	"github.com/opensaucerer/gotemplate/typing"
 	"github.com/opensaucerer/gotemplate/version"
@@ -39,8 +38,6 @@ func createServer() (s *http.Server) {
 	// register routes with versioning
 	version.Version1Routes(r.StrictSlash(true))
 
-	var err error
-
 	// load .env file
 	env := config.MustGet("ENV_PATH", ".env")
 	log.Printf("Loading %s file\n", env)
@@ -57,14 +54,6 @@ func createServer() (s *http.Server) {
 
 	// append env variables to config.Env
 	config.AppendEnvironment(config.Env)
-
-	// connect to database
-	client, err := database.NewMongoDBClient(config.Env.Raid2EarnDBUri)
-	if err != nil {
-		log.Fatalf("Error connecting to Raid2EarnDB: %s\n", err)
-	}
-	// select database
-	database.Raid2EarnDB = client.Database(config.Env.Raid2EarnDBName)
 
 	port := fmt.Sprintf(":%s", config.Env.Port)
 
