@@ -15,3 +15,10 @@ func HealthCheck(w http.ResponseWriter, r *http.Request) {
 	}
 	helper.SendJSONResponse(w, true, http.StatusOK, "Health Check", typing.M{"health": data})
 }
+
+func HealthInformation(w http.ResponseWriter, r *http.Request) {
+	info := typing.HealthInfo{
+		Status: "OK",
+	}
+	helper.SendJSONResponse(w, true, http.StatusOK, "Health Information", typing.M{"health info": info})
+}

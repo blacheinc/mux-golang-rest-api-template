@@ -8,7 +8,10 @@ import (
 
 func RegisterHealthRoutes(r *mux.Router) {
 
+	r.HandleFunc("/", base.HealthCheck).Methods("GET")
+
 	router := r.PathPrefix("/health").Subrouter()
 
-	router.HandleFunc("", base.HealthCheck).Methods("GET")
+	router.HandleFunc("", base.HealthInformation).Methods("GET")
+
 }

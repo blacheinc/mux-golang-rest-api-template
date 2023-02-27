@@ -5,6 +5,9 @@ type Health struct {
 	Version     string `json:"version"`
 	Description string `json:"description"`
 }
+type HealthInfo struct {
+	Status string `json:"status`
+}
 
 type Response struct {
 	Status  bool        `json:"status"`
