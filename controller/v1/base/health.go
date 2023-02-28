@@ -7,11 +7,10 @@ import (
 	"github.com/opensaucerer/gotemplate/typing"
 )
 
+//HealthCheck checks health information of the app in relation to a specific version
 func HealthCheck(w http.ResponseWriter, r *http.Request) {
-	data := typing.Health{
-		Version:     "0.0.1",
-		Status:      true,
-		Description: "Raid2Earns. Leaders create raids and pawns pick 'em up.",
+	info := typing.Health{
+		Status: "OK",
 	}
-	helper.SendJSONResponse(w, true, http.StatusOK, "Health Check", typing.M{"health": data})
+	helper.SendJSONResponse(w, true, http.StatusOK, "Health Information", typing.M{"health info": info})
 }

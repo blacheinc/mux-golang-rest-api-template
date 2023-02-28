@@ -6,7 +6,7 @@ import (
 	mux "github.com/gorilla/mux"
 )
 
-func RegisterHealthRoutes(r *mux.Router) {
+func RegisterHealthCheckRoute(r *mux.Router) {
 
 	router := r.PathPrefix("/health").Subrouter()
 
