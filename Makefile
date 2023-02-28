@@ -1,5 +1,5 @@
 # set env value NAME
-NAME = "raid2earn"
+NAME = "app"
 # set env value VERSION
 VERSION = "1.0.0"
 

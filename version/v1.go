@@ -9,10 +9,11 @@ import (
 func Version1Routes(r *mux.Router) {
 
 	//server info in json format
-	base.RegisterHealthRoutes(r)
+	base.RegisterHomeRoute(r)
 
 	// V1 routes
 	router := r.PathPrefix("/v1").Subrouter()
 	//health information in relation to version 1
-	base.RegisterHealthRoutes(router)
+	base.RegisterHealthCheckRoute(router)
+
 }

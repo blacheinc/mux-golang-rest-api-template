@@ -1,11 +1,11 @@
 package typing
 
-type Health struct {
+type Home struct {
 	Status      bool   `json:"status"`
 	Version     string `json:"version"`
 	Description string `json:"description"`
 }
-type HealthInfo struct {
+type Health struct {
 	Status string `json:"status`
 }
 
