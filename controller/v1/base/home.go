@@ -13,5 +13,5 @@ func Home(w http.ResponseWriter, r *http.Request) {
 		Version:     "0.0.1",
 		Description: "Golang Server Template",
 	}
-	helper.SendJSONResponse(w, true, http.StatusOK, "Health Check", typing.M{"health": data})
+	helper.SendJSONResponse(w, true, http.StatusOK, "Home", typing.M{"home": data})
 }
