@@ -5,8 +5,11 @@ type Home struct {
 	Version     string `json:"version"`
 	Description string `json:"description"`
 }
+
 type Health struct {
-	Status string `json:"status`
+	Name    string `json:"name"`
+	Status  bool   `json:"status"`
+	Version string `json:"version"`
 }
 
 type Response struct {
