@@ -6,9 +6,9 @@ import (
 	mux "github.com/gorilla/mux"
 )
 
-func RegisterHealthRoute(r *mux.Router) {
+func RegisterHealthRoutes(r *mux.Router) {
 
 	router := r.PathPrefix("/health").Subrouter()
 
-	router.HandleFunc("", base.HealthCheck).Methods("GET")
+	router.HandleFunc("", base.Health).Methods("GET")
 }

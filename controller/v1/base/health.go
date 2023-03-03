@@ -8,12 +8,12 @@ import (
 )
 
 //HealthCheck checks health information of the app in relation to a specific version
-func HealthCheck(w http.ResponseWriter, r *http.Request) {
+func Health(w http.ResponseWriter, r *http.Request) {
 
 	info := typing.Health{
 		Name:    "Golang Server Template",
 		Status:  true,
-		Version: "0.0.1",
+		Version: "1.0.0",
 	}
 
 	helper.SendJSONResponse(w, true, http.StatusOK, "Health", typing.M{"health info": info})
