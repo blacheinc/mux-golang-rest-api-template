@@ -7,7 +7,7 @@ import (
 	"github.com/opensaucerer/gotemplate/typing"
 )
 
-//HealthCheck checks health information of the app in relation to a specific version
+//Health checks health information of the app in relation to a specific version
 func Health(w http.ResponseWriter, r *http.Request) {
 
 	data := typing.Health{
