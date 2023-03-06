@@ -1,12 +1,12 @@
 package route
 
 import (
-	"github.com/opensaucerer/gotemplate/controller/v1/base"
+	"github.com/opensaucerer/gotemplate/controller"
 
 	mux "github.com/gorilla/mux"
 )
 
 func RegisterHomeRoutes(r *mux.Router) {
 
-	r.HandleFunc("/", base.Home).Methods("GET")
+	r.HandleFunc("/", controller.Home).Methods("GET")
 }
