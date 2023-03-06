@@ -10,5 +10,5 @@ func RegisterHealthRoutes(r *mux.Router) {
 
 	router := r.PathPrefix("/health").Subrouter()
 
-	router.HandleFunc("", base.HealthCheck).Methods("GET")
+	router.HandleFunc("", base.Health).Methods("GET")
 }
