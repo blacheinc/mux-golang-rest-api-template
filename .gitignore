@@ -1,3 +1,4 @@
 # dotenv environment variable files
 .env
 
+bin/
