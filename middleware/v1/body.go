@@ -9,9 +9,9 @@ import (
 	"github.com/opensaucerer/gotemplate/typing"
 )
 
-//BodyH is a middleware that takes a struct and a request handler.
+// BodyH is a middleware that takes a struct and a request handler.
 // It parses the request body into the given struct and pushes it into
-// thee request's context using the BodyCtxKey.
+// the request's context using the BodyCtxKey
 func BodyH(bodyStruct interface{}) func(http.Handler) http.Handler {
 	return func(next http.Handler) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -32,10 +32,9 @@ func BodyH(bodyStruct interface{}) func(http.Handler) http.Handler {
 	}
 }
 
-//BodyF is a middleware that takes a struct and a controller function.
-//It parses the request body into the given struct and pushes it into
-//the request's context using the BodyCtxKey.
-
+// BodyF is a middleware that takes a struct and a controller function.
+// It parses the request body into the given struct and pushes it into
+// the request's context using the BodyCtxKey
 func BodyF(bodyStruct interface{}) func(func(http.ResponseWriter, *http.Request)) http.Handler {
 	return func(next func(http.ResponseWriter, *http.Request)) http.Handler {
 		return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
