@@ -12,6 +12,7 @@ import (
 
 	"github.com/joho/godotenv"
 	"github.com/opensaucerer/gotemplate/config"
+	"github.com/opensaucerer/gotemplate/database"
 
 	"github.com/opensaucerer/gotemplate/middleware/v1"
 	"github.com/opensaucerer/gotemplate/typing"
@@ -54,6 +55,9 @@ func createServer() (s *http.Server) {
 
 	// append env variables to config.Env
 	config.AppendEnvironment(config.Env)
+
+	//connect to monogoDB and select database
+	database.NewMongoDBClient(config.Env.MongoDBUri, config.Env.MongoDBName)
 
 	port := fmt.Sprintf(":%s", config.Env.Port)
 
