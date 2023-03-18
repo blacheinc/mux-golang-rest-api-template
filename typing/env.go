@@ -7,4 +7,6 @@ type Env struct {
 	MongoDBUri string `env:"MONGO_DB_URI"`
 	//AppDBName is the database name for App
 	MongoDBName string `env:"MONGO_DB_NAME"`
+	//PostgreSQLUri is the PostgreSQL database uri string for App
+	PostgreSQLUri string `env:"POSTGRE_SQL_URI"`
 }
