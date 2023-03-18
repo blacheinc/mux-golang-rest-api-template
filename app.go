@@ -59,6 +59,9 @@ func createServer() (s *http.Server) {
 	//connect to monogoDB and select database
 	database.NewMongoDBClient(config.Env.MongoDBUri, config.Env.MongoDBName)
 
+	//connect to PostgreSQL database
+	database.NewPostgreSQLConnection(config.Env.PostgreSQLUri, config.MaxConnections)
+
 	port := fmt.Sprintf(":%s", config.Env.Port)
 
 	s = &http.Server{
