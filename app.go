@@ -57,12 +57,10 @@ func createServer() (s *http.Server) {
 	config.AppendEnvironment(config.Env)
 
 	//connect to monogoDB and select database
-	database.NewMongoDBClient(config.Env.MongoDBUri, config.Env.MongoDBName)
-
-	port := fmt.Sprintf(":%s", config.Env.Port)
+	database.NewMongoDBClient(config.Env.MongoDBURI, config.Env.MongoDBName)
 
 	s = &http.Server{
-		Addr:           port,
+		Addr:           fmt.Sprintf(":%s", config.Env.Port),
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
@@ -70,7 +68,7 @@ func createServer() (s *http.Server) {
 	}
 
 	go func() {
-		log.Printf("Starting at http://127.0.0.1%s", port)
+		log.Printf("Starting at http://127.0.0.1%s", fmt.Sprintf(":%s", config.Env.Port))
 		if err := s.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			log.Fatalf("error listening on port: %s\n", err)
 		}
