@@ -13,6 +13,9 @@ const (
 
 	// ShutdownTimeout is the time to wait for the server to shutdown gracefully
 	ShutdownTimeout = 5 // seconds
+
+	//maxconnections is the maximum size of the pool
+	MaxConnections = 15
 )
 
 var (
