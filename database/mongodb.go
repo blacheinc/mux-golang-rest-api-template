@@ -30,7 +30,7 @@ func NewMongoDBClient(uri string, name string) (*mongo.Database, error) {
 	log.Println("connected to monogodb!")
 
 	//get the database
-	db := client.Database(name)
+	mongoDB := client.Database(name)
 
 	//set the global mongoDB variable
 	MongoDB = db
