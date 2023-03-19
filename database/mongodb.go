@@ -32,8 +32,5 @@ func NewMongoDBClient(uri string, name string) (*mongo.Database, error) {
 	//get the database
 	mongoDB := client.Database(name)
 
-	//set the global mongoDB variable
-	MongoDB = db
-
-	return db, nil
+	return mongoDB, nil
 }
