@@ -5,5 +5,5 @@ import (
 )
 
 var (
-	PostgreDB *pgxpool.Pool
+	PostgreSQLDB *pgxpool.Pool
 )

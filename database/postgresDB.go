@@ -6,17 +6,17 @@ import (
 	"github.com/jackc/pgx/v4/pgxpool"
 )
 
-func NewPostgreSQLConnection(uri string, connections int32) (*pgxpool.Pool, error) {
+func NewPostgreSQLConnection(uri string, connections int32) error {
 	config, err := pgxpool.ParseConfig(uri)
 	if err != nil {
-		return nil, err
+		return err
 	}
 	config.MaxConns = connections
 	//create a new connection pool
-	pool, err := pgxpool.ConnectConfig(context.Background(), config)
+	PostgreSQLDB, err = pgxpool.ConnectConfig(context.Background(), config)
 	if err != nil {
-		return nil, err
+		return err
 	}
-	PostgreDB = pool
-	return pool, nil
+
+	return nil
 }
