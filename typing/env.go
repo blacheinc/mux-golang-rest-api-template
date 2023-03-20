@@ -1,7 +1,7 @@
 package typing
 
 type Env struct {
-	// Port for the server to listen on
+	//Port for the server to listen on
 	Port string `env:"PORT"`
 	//MongoDBURI is the monogoDB connection string for the app
 	MongoDBURI string `env:"MONGO_DB_URI"`
