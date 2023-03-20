@@ -10,7 +10,7 @@ import (
 	"go.mongodb.org/mongo-driver/mongo/readpref"
 )
 
-func NewMongoDBClient(uri string, name string) (*mongo.Database, error) {
+func NewMongoDBClient(uri string, name string) error {
 
 	clientOption := options.Client().ApplyURI(uri)
 
@@ -20,17 +20,17 @@ func NewMongoDBClient(uri string, name string) (*mongo.Database, error) {
 	//connect to mongoDB
 	client, err := mongo.Connect(ctx, clientOption)
 	if err != nil {
-		return nil, err
+		return err
 	}
 	//check the connection
 	err = client.Ping(ctx, readpref.Primary())
 	if err != nil {
-		return nil, err
+		return err
 	}
 	log.Println("connected to monogodb!")
 
 	//get the database
-	mongoDB := client.Database(name)
+	MongoDB = client.Database(name)
 
-	return mongoDB, nil
+	return nil
 }
