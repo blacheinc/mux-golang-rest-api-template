@@ -12,6 +12,7 @@ import (
 
 	"github.com/joho/godotenv"
 	"github.com/opensaucerer/gotemplate/config"
+	"github.com/opensaucerer/gotemplate/database"
 
 	"github.com/opensaucerer/gotemplate/middleware/v1"
 	"github.com/opensaucerer/gotemplate/typing"
@@ -55,10 +56,11 @@ func createServer() (s *http.Server) {
 	// append env variables to config.Env
 	config.AppendEnvironment(config.Env)
 
-	port := fmt.Sprintf(":%s", config.Env.Port)
+	//connect to monogoDB and select database
+	database.NewMongoDBClient(config.Env.MongoDBURI, config.Env.MongoDBName)
 
 	s = &http.Server{
-		Addr:           port,
+		Addr:           fmt.Sprintf(":%s", config.Env.Port),
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
 		MaxHeaderBytes: 1 << 20,
@@ -66,7 +68,7 @@ func createServer() (s *http.Server) {
 	}
 
 	go func() {
-		log.Printf("Starting at http://127.0.0.1%s", port)
+		log.Printf("Starting at http://127.0.0.1%s", fmt.Sprintf(":%s", config.Env.Port))
 		if err := s.ListenAndServe(); err != nil && err != http.ErrServerClosed {
 			log.Fatalf("error listening on port: %s\n", err)
 		}
