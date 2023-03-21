@@ -56,6 +56,9 @@ func createServer() (s *http.Server) {
 	// append env variables to config.Env
 	config.AppendEnvironment(config.Env)
 
+	//connect to monogoDB and select database
+	database.NewMongoDBClient(config.Env.MongoDBURI, config.Env.MongoDBName)
+
 	//connect to PostgreSQL database
 	database.NewPostgreSQLConnection(config.Env.PostgreSQLURI, config.MaxConnections)
 
