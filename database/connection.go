@@ -1,5 +1,11 @@
 package database
 
-import "go.mongodb.org/mongo-driver/mongo"
+import (
+	"github.com/jackc/pgx/v4/pgxpool"
+	"go.mongodb.org/mongo-driver/mongo"
+)
 
-var MongoDB *mongo.Database
+var (
+	PostgreSQLDB *pgxpool.Pool
+	MongoDB      *mongo.Database
+)

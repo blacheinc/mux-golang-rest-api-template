@@ -57,7 +57,14 @@ func createServer() (s *http.Server) {
 	config.AppendEnvironment(config.Env)
 
 	//connect to monogoDB and select database
-	database.NewMongoDBClient(config.Env.MongoDBURI, config.Env.MongoDBName)
+	if err := database.NewMongoDBClient(config.Env.MongoDBURI, config.Env.MongoDBName); err != nil {
+		log.Fatalf("Error connecting to MongoDBURI: %s\n", err)
+	}
+
+	//connect to PostgreSQL database
+	if err := database.NewPostgreSQLConnection(config.Env.PostgreSQLURI, config.MaxConnections); err != nil {
+		log.Fatalf("Error connecting to PostgreSQLURI: %s\n", err)
+	}
 
 	s = &http.Server{
 		Addr:           fmt.Sprintf(":%s", config.Env.Port),
