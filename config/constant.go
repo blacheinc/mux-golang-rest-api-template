@@ -25,3 +25,8 @@ var (
 	// ShutdownChan is the channel to listen for shutdown signals
 	ShutdownChan = make(chan os.Signal, 1)
 )
+
+const (
+	// UserCollection is the name of the mongodb user collection
+	UserCollection = "users"
+)

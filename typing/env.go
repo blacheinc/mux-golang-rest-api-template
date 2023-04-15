@@ -9,4 +9,9 @@ type Env struct {
 	MongoDBName string `env:"MONGO_DB_NAME"`
 	//PostgreSQLURI is the PostgreSQL database uri string for App
 	PostgreSQLURI string `env:"POSTGRE_SQL_URI"`
+
+	// JWTSecret is the jwt secret
+	JWTSecret string `env:"JWT_SECRET"`
+	// AppName is the app name
+	AppName string `env:"APP_NAME"`
 }
