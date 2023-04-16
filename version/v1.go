@@ -1,9 +1,9 @@
 package version
 
 import (
+	"github.com/blacheinc/gotemplate/route"
+	v1 "github.com/blacheinc/gotemplate/version/v1"
 	mux "github.com/gorilla/mux"
-	"github.com/opensaucerer/gotemplate/route"
-	v1 "github.com/opensaucerer/gotemplate/version/v1"
 )
 
 // Version1Routes registers all routes for the v1 version

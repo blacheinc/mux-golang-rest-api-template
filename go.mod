@@ -1,4 +1,4 @@
-module github.com/opensaucerer/gotemplate
+module github.com/blacheinc/gotemplate
 
 go 1.18
 

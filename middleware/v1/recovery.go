@@ -4,7 +4,7 @@ import (
 	"errors"
 	"net/http"
 
-	"github.com/opensaucerer/gotemplate/helper"
+	"github.com/blacheinc/gotemplate/helper"
 )
 
 // Recover is a middleware that recovers from panics and sends a 500 response.

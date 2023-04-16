@@ -1,9 +1,9 @@
 package helper
 
 import (
+	"github.com/blacheinc/gotemplate/config"
+	"github.com/blacheinc/gotemplate/typing"
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/opensaucerer/gotemplate/config"
-	"github.com/opensaucerer/gotemplate/typing"
 )
 
 // VerifyJWT verifies a JWT and returns the claims

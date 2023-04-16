@@ -3,8 +3,8 @@ package controller
 import (
 	"net/http"
 
-	"github.com/opensaucerer/gotemplate/helper"
-	"github.com/opensaucerer/gotemplate/typing"
+	"github.com/blacheinc/gotemplate/helper"
+	"github.com/blacheinc/gotemplate/typing"
 )
 
 func Home(w http.ResponseWriter, r *http.Request) {

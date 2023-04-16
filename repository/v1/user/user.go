@@ -3,8 +3,8 @@ package user
 import (
 	"context"
 
-	"github.com/opensaucerer/gotemplate/config"
-	"github.com/opensaucerer/gotemplate/database"
+	"github.com/blacheinc/gotemplate/config"
+	"github.com/blacheinc/gotemplate/database"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"

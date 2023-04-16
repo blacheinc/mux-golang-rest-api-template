@@ -1,8 +1,8 @@
 package v1
 
 import (
+	"github.com/blacheinc/gotemplate/route/v1/base"
 	"github.com/gorilla/mux"
-	"github.com/opensaucerer/gotemplate/route/v1/base"
 )
 
 func RegisterBaseRoutes(r *mux.Router) {

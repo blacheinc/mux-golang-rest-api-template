@@ -1,7 +1,7 @@
 package route
 
 import (
-	"github.com/opensaucerer/gotemplate/controller"
+	"github.com/blacheinc/gotemplate/controller"
 
 	mux "github.com/gorilla/mux"
 )

@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/opensaucerer/gotemplate/typing"
+	"github.com/blacheinc/gotemplate/typing"
 )
 
 // SendJSONResponse sends a JSON response

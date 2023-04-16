@@ -4,8 +4,8 @@ import (
 	"context"
 	"net/http"
 
+	"github.com/blacheinc/gotemplate/typing"
 	"github.com/gorilla/mux"
-	"github.com/opensaucerer/gotemplate/typing"
 )
 
 // ParamsH is a middleware that takes a request handler

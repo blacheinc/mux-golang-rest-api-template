@@ -1,7 +1,7 @@
 package base
 
 import (
-	"github.com/opensaucerer/gotemplate/controller/v1/base"
+	"github.com/blacheinc/gotemplate/controller/v1/base"
 
 	mux "github.com/gorilla/mux"
 )

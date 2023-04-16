@@ -3,8 +3,8 @@ package base
 import (
 	"net/http"
 
-	"github.com/opensaucerer/gotemplate/helper"
-	"github.com/opensaucerer/gotemplate/typing"
+	"github.com/blacheinc/gotemplate/helper"
+	"github.com/blacheinc/gotemplate/typing"
 )
 
 //Health checks health information of the app in relation to a specific version

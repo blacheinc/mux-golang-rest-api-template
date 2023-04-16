@@ -3,7 +3,7 @@ package config
 import (
 	"os"
 
-	"github.com/opensaucerer/gotemplate/typing"
+	"github.com/blacheinc/gotemplate/typing"
 )
 
 const (

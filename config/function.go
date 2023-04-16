@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/opensaucerer/gotemplate/typing"
+	"github.com/blacheinc/gotemplate/typing"
 )
 
 // verifyEnvironment checks if all environment variables are set

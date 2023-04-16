@@ -3,9 +3,9 @@ package helper
 import (
 	"time"
 
+	"github.com/blacheinc/gotemplate/config"
+	"github.com/blacheinc/gotemplate/typing"
 	"github.com/golang-jwt/jwt/v4"
-	"github.com/opensaucerer/gotemplate/config"
-	"github.com/opensaucerer/gotemplate/typing"
 )
 
 // SignJWT signs a JWT with the given address

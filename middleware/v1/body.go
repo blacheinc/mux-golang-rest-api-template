@@ -5,8 +5,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/opensaucerer/gotemplate/helper"
-	"github.com/opensaucerer/gotemplate/typing"
+	"github.com/blacheinc/gotemplate/helper"
+	"github.com/blacheinc/gotemplate/typing"
 )
 
 // Body parses the request body into the given struct

@@ -6,9 +6,9 @@ import (
 
 	"strings"
 
-	"github.com/opensaucerer/gotemplate/helper"
-	"github.com/opensaucerer/gotemplate/repository/v1/user"
-	"github.com/opensaucerer/gotemplate/typing"
+	"github.com/blacheinc/gotemplate/helper"
+	"github.com/blacheinc/gotemplate/repository/v1/user"
+	"github.com/blacheinc/gotemplate/typing"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )
 

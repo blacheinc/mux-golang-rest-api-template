@@ -10,13 +10,13 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/blacheinc/gotemplate/config"
+	"github.com/blacheinc/gotemplate/database"
 	"github.com/joho/godotenv"
-	"github.com/opensaucerer/gotemplate/config"
-	"github.com/opensaucerer/gotemplate/database"
 
-	"github.com/opensaucerer/gotemplate/middleware/v1"
-	"github.com/opensaucerer/gotemplate/typing"
-	"github.com/opensaucerer/gotemplate/version"
+	"github.com/blacheinc/gotemplate/middleware/v1"
+	"github.com/blacheinc/gotemplate/typing"
+	"github.com/blacheinc/gotemplate/version"
 
 	"github.com/gorilla/handlers"
 	"github.com/gorilla/mux"
